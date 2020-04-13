@@ -1,7 +1,21 @@
-let arr = ['plam.png', 'orange.jpg', 'apple.bmp'];
+let money = prompt('Ваш бюджет на месяц?', '');
+let time = prompt('Введите дату в формате YYYY-MM-DD', '');
+let appData = {
+  budget: money,
+  timeData: time,
+  expenses: {},
+  optionalExpenses: {},
+  income: [],
+  savings: false
+};
 
 
-console.log(arr[1]);
+let a = prompt('Введите обязательную статью расходов в этом месяц', '');
+let c = prompt('Во сколько обойдется?', '');
+let b = prompt('Введите обязательную статью расходов в этом месяц', '');
+let d = prompt('Во сколько обойдется?', '');
 
-let a = +prompt('Hello?');
-console.log(typeof (a));
+appData.expenses[a] = c;
+appData.expenses[b] = d;
+
+alert(appData.budget / 30);
